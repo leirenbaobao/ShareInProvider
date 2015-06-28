@@ -58,11 +58,9 @@ public class StringProvider extends ContentProvider{
 
     @Override
     public Uri insert(Uri uri, ContentValues contentValues) {
-        Log.v(TAG, "come in insert");
         int code = sMatcher.match(uri);
         switch (code){
             case MATCH_RIGHT_NUM:
-                Log.v(TAG, "insert");
                 return getPrefsValue(getContext(), contentValues);
             default:
                 break;
@@ -76,7 +74,6 @@ public class StringProvider extends ContentProvider{
         Log.v(TAG, uri.toString() + code);
         switch (code){
             case MATCH_RIGHT_NUM:
-                Log.v(TAG, "update");
                 putPrefsValue(getContext(), contentValues);
                 break;
             default:
