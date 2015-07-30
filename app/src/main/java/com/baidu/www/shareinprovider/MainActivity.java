@@ -15,6 +15,8 @@ public class MainActivity extends ActionBarActivity {
     private Button mButtonTake;
     private TextView mTextView;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
